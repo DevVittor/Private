@@ -6,5 +6,7 @@ const loginController = new Login();
 
 router.get("/",loginController.index);
 router.post("/check",loginController.store);
+router.put("/:id",loginController.put);
+router.delete("/:id",loginController.delete);
 
 export default router;

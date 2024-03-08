@@ -33,6 +33,30 @@ class Login{
         }
     }
 
+    async put(req,res){
+        //
+    }
+
+    async delete(req,res){
+        const userId = req.params.id;
+
+        try {
+            const existUser = await Users.findOne({
+                where:{
+                    id:userId 
+                }
+            })
+
+            if(!existUser) return res.status(404).json({msg:`Não tem nenhum usuário com esse id: ${userId}`});
+
+            await existUser.destroy();
+            res.status(200).json({ msg: `Usuário com ID ${userId} excluído com sucesso` });
+        } catch (error) {
+            res.status(404).json({msg:`Não foi encontrado nenhum Id. ${error}`})
+        }
+
+    }
+
 }
 
 export default Login;
