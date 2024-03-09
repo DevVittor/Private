@@ -1,0 +1,29 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: white;
+}
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
+}
+.title_header h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+.menu_header ul{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+.menu_header a{
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}

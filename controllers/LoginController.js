@@ -1,5 +1,9 @@
 import Users from "../models/Users.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+const secret = process.env.JWT_SECRET;
 
 class Login{
 
@@ -12,7 +16,7 @@ class Login{
         const {email,password} = req.body;
         
         try {
-            
+
             const checkUser = await  Users.findOne({
                 where:{
                     email:email
@@ -24,8 +28,9 @@ class Login{
             const checkPassword = await bcrypt.compareSync(password,checkUser.password);
 
             if(!checkPassword) return res.status(404).json({msg:`Essa senha ${password} não é válida!`});
-
-            res.status(200).json({msg:`Login feito com sucesso!`});
+            // Credenciais válidas, gerar token JWT
+            const token = jwt.sign({ userId: checkUser.id }, secret, { expiresIn: '1h' });
+            res.status(200).json({msg:`Login feito com sucesso!`,token:`${token}`});
 
         } catch (error) {
             res.status(404).json({msg:`Não foi encontrado nada. ${error}`});
