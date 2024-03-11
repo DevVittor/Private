@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos</title>
+    <title>Post</title>
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Publicar Fotos</h1>
+    <h1>Publicar</h1>
+    <form onsubmit="handlePost(event)">
+        <input type="text" name="title" id="title_post" placeholder="Title">
+        <input type="submit" value="Criar Post">
+    </form>
     <%- include("./components/headerPainel.ejs") %>
 </body>
+<script src="/js/posts.js"></script>
 </html>

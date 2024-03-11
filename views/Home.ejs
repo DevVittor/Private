@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/home.css">
     <title>Home</title>
 </head>
 <body>
+    <%- include("./components/Nav.ejs") %>
     <h1>Home</h1>
+    <div class="container_post">
+        <% viewPost.forEach((post)=>{ %>
+            <div class="card_post">
+                <h1><%= post.title %></h1>
+                <img loading="lazy" src="https://images.pexels.com/photos/20454086/pexels-photo-20454086/free-photo-of-leve-luz-light-cidade.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                <div class="card_comentary_like">
+                    <button>Curtir</button>
+                    <button>Comentar</button>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    
 </body>
 </html>

@@ -1,14 +1,23 @@
-import Sequelize from "sequelize";
+import { DataTypes } from "sequelize";
 import conn from "../database/conn.js";
 
 const Users  = conn.define("users",{
+    nome:{
+        type:DataTypes.STRING(150),
+        allowNull:false
+    },
     email:{
-        type:Sequelize.STRING,
+        type:DataTypes.STRING,
         allowNull:false
     },
     password:{
-        type:Sequelize.STRING,
+        type:DataTypes.STRING,
         allowNull:false
+    },
+    roles:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        defaultValue:"usuario"
     }
 });
 

@@ -5,15 +5,17 @@ class Register{
 
     async index(req,res){
         res.render("Register");
-    }
+    }   
 
     async store(req,res){
 
-        const {email,password} = req.body;
+        const {nome,email,password,roles} = req.body;
         
         try {
+            if(!nome) return res.status(404).json({msg:"Preencha o campo nome"});
             if(!email) return res.status(404).json({msg:"Preencha o campo email"});
             if(!password) return res.status(404).json({msg:"Preencha o campo password"});
+            if(!roles) return res.status(404).json({msg:"Preencha o campo roles"});
     
             const duplicateEmail = await Users.findOne({
                 where:{
@@ -27,8 +29,10 @@ class Register{
             const hash = bcrypt.hashSync(password,salt);
     
             const createUser = await Users.create({
+                nome,
                 email,
-                password:hash
+                password:hash,
+                roles
             });
     
             await createUser.save()

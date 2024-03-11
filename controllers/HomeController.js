@@ -1,7 +1,12 @@
+import Posts from "../models/Posts.js";
 class Home{
 
     async index(req,res){
-        res.render("Home")
+        const viewPost = await  Posts.findAll();
+
+        if(!viewPost) return res.status(404).json({msg:`Não foi possível encontrar nenhum post`});
+
+        res.render("Home",{viewPost: viewPost});
     }
 
 }

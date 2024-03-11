@@ -7,7 +7,14 @@
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Assinantes</h1>
+    <h1>Lista de Assinantes</h1>
+        <% assinantesLista.forEach((assinante) => { %>
+            <nav>
+                <ul>
+                    <li>Id: <%= assinante.id %> | Nome: <%= assinante.nome %> | Roles: <%= assinante.roles %></li>
+                </ul>
+            </nav>
+        <% }); %>
     <%- include("./components/headerPainel.ejs") %>
 </body>
 </html>

@@ -7,7 +7,7 @@ import Register from "../../controllers/RegisterController.js";
 const registerController = new Register();
 
 router.get("/",registerController.index);
-router.post("/save", registerController.store);
+router.post("/", registerController.store);
 
 
 export default router;
