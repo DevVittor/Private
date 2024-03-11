@@ -12,7 +12,7 @@ async function handlePost(event){
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(formData)
-        })
+        });
         console.log(`O post foi criado com sucesso!`);
     } catch (error) {
         console.log(`Não foi possível criar o post. ${error}`);

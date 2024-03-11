@@ -8,19 +8,69 @@
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Home</h1>
-    <div class="container_post">
-        <% viewPost.forEach((post)=>{ %>
-            <div class="card_post">
-                <h1><%= post.title %></h1>
-                <img loading="lazy" src="https://images.pexels.com/photos/20454086/pexels-photo-20454086/free-photo-of-leve-luz-light-cidade.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-                <div class="card_comentary_like">
-                    <button>Curtir</button>
-                    <button>Comentar</button>
+    
+    <main>
+        <section>
+            <div class="container_home">
+                
+                <div class="menu_home">
+                    <div class="card_menu_home"></div>
+                    <div class="card_menu_home"></div>
                 </div>
+
+                <div class="box_content_home">
+                    <div class="publication_home">
+                        <div class="img_publication_home">
+                            <img class="" src="https://images.pexels.com/photos/20193046/pexels-photo-20193046/free-photo-of-leve-luz-light-restaurante.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                        </div>
+                        <div class="content_publication_home">
+                            <div class="input_publication_home">
+                                <input class="" type="text" name="" id="" placeholder="Share something...">
+                                <button class="" type="submit"><i class="bi bi-cloud-arrow-up-fill"></i>Publicar</button>
+                            </div>
+                            <div class="buttons_publication_home">
+                                <button class=""><i class="bi bi-image"></i>Image</button>
+                                <button class=""><i class="bi bi-camera-video-fill"></i>Video</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box_filter_home">
+                        <hr class="">
+                        <span class="">Sort By:</span>
+                        <select name="" id="" class="">
+                            <option class="" value="">Recent</option>
+                        </select>
+                    </div>
+
+                    <div class="container_content_home">
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                        <%- include("./components/cardPost.ejs") %>
+                    </div>
+
+                </div>
+                <div class="h-full w-[20%] bg-white"></div>
             </div>
-        <% }); %>
-    </div>
+        </section>
+    </main>
     
 </body>
 </html>

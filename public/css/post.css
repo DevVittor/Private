@@ -1,0 +1,123 @@
+.container_card_post{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+    width: 70%;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+}
+.box_profile_post{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.box_profile_post img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.name_profile_post{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.name_profile_post h2{
+    font-weight: 600;
+    font-size: 18px;
+    color: #212121;
+}
+.name_profile_post span{
+    font-size: 12px;
+    font-weight: 400;
+}
+.about_post,
+.img_post{
+    display: flex;
+    align-items: center;
+}
+.about_post p{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+.img_post{
+    position: relative;
+}
+.img_post img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.full_img_post {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5px 8px;
+    font-size: 22px;
+    color: white;
+}
+.buttons_post{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.buttons_post button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.comentario_post{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.avatar_comentario_post{
+    height: 30px;
+    width: 30px;
+}
+.avatar_comentario_post img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.inputs_comentario_post{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+.inputs_comentario_post input[type="text"]{
+    background: #ddd;
+    border: none;
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.inputs_comentario_post button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: blue;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
