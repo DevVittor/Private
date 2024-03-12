@@ -1,14 +1,22 @@
+.container_home_post{
+    display: flex;
+    padding: 10px;
+    background: black;
+    height: 100vh;
+    gap: 10px;
+    position: relative;
+}
 .container_home{
     display:flex;
-    height: auto;
+    height: 100vh;
     width: 100%;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; 
 }
 .menu_home{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 800px;
+    height: 92vh;
     width: 20%;
     padding: 20px 10px;
     background: blue;
@@ -24,15 +32,18 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    height: auto;
-    width: 60%;
-    background: #f9f9f9;
-    padding: 5px;
+    height: 100%;
+    width: 80%;
+    margin-left: 20%;
+    background: white;
+    padding: 10px;
+    border-radius: 12px ;
 }
 .publication_home{
     display: flex;
     gap: 10px;
     background: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     padding: 20px 10px;
     width: auto;
     border-radius: 5px;
@@ -118,6 +129,7 @@
     height: auto;
     width: 100%;
     gap: 10px;
+    padding-bottom: 20px;
 }
 
 
