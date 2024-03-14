@@ -9,13 +9,12 @@ class Register{
 
     async store(req,res){
 
-        const {nome,email,password,roles} = req.body;
+        const {nome,email,password} = req.body;
         
         try {
             if(!nome) return res.status(404).json({msg:"Preencha o campo nome"});
             if(!email) return res.status(404).json({msg:"Preencha o campo email"});
             if(!password) return res.status(404).json({msg:"Preencha o campo password"});
-            if(!roles) return res.status(404).json({msg:"Preencha o campo roles"});
     
             const duplicateEmail = await Users.findOne({
                 where:{
@@ -31,8 +30,7 @@ class Register{
             const createUser = await Users.create({
                 nome,
                 email,
-                password:hash,
-                roles
+                password:hash
             });
     
             await createUser.save()

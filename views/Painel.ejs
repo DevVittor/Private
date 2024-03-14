@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/painel.css">
     <title>Painel</title>
 </head>
 <body>
-    <%- include("./components/Nav.ejs") %>
-    <h1>Painel</h1>
-    <%- include("./components/headerPainel.ejs") %>
+    <div class="">
+        <%- include("./components/Nav.ejs") %>
+        <div class="container_painel">
+            <h1>Painel</h1>
+            <%- include("./components/headerPainel.ejs") %>
+        </div>
+    </div>
 </body>
 </html>

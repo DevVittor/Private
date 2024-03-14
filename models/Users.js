@@ -14,11 +14,6 @@ const Users  = conn.define("users",{
         type:DataTypes.STRING,
         allowNull:false
     },
-    roles:{
-        type:DataTypes.STRING,
-        allowNull:false,
-        defaultValue:"usuario"
-    }
 });
 
 Users.sync()

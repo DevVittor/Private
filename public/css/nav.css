@@ -3,7 +3,7 @@ header{
     height: 100vh;
     z-index: 9999;
     width: 20%;
-    background: black;
+    background: #1F1717;
 }
 .container_header{
     display: flex;
@@ -26,22 +26,35 @@ header{
 }
 .menu_header{
     display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 100%;    
-    background: white; 
     gap: 5px;
 }
 .menu_header ul{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:8px;
+    gap:5px;
+}
+.menu_header nav    {
+    width: 100%;
+}
+.menu_header li{
+    height: 30px;
+    width: 100%;
 }
 .menu_header a{
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
     color: black;
     font-size: 14px;
     font-weight: 500;
+    height: 100%;
     width: 100%;    
     background: white;
+    border-radius: 3px;
 }
 .menu_admin_header{
     display: flex;
@@ -49,11 +62,36 @@ header{
     align-items: center;
     flex-direction: column;
     gap: 8px;
-
 }
 .profile_header{
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    padding: 5px 10px;
     width: 100%;
     border-radius: 3px;
-    background: red;
+    background: #EF4040;
+}
+
+.img_profile_header img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.name_profile_header{
+    display: flex;
+    flex-direction: column;
+}
+.name_profile_header h2{
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.name_profile_header span{
+    color: #f9f9f9;
+    font-weight: 300;
+    font-size: 12px;
 }

@@ -12,13 +12,21 @@
             <nav>
                 <ul>
                     <li><a href="/v1">Inicio</a></li>
-                    <li><a href="#">Planos</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="/v1/painel/1">Painel</a></li>
+                    <li><a href="/v1/planos">Planos</a></li>
+                    <li><a href="/v1/sobre">Sobre</a></li>
+                    <li><a href="/v1/contato">Contato</a></li>
                 </ul>
             </nav>
+            <%- include("../components/headerPainel.ejs") %>
         </div>
-        <div class="profile_header"></div>
+        <div class="profile_header">
+            <div class="img_profile_header">
+                <img src="https://images.pexels.com/photos/20193046/pexels-photo-20193046/free-photo-of-leve-luz-light-restaurante.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            </div>
+            <div class="name_profile_header">
+                <h2>Jéssica Gomes</h2>
+                <span>Admin</span>
+            </div>
+        </div>
     </div>
 </header>

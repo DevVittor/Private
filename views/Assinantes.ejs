@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/assinantes.css">
     <title>Assinantes</title>
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Lista de Assinantes</h1>
+    <div class="container_assinantes">
+        <h1>Lista de Assinantes</h1>
         <% assinantesLista.forEach((assinante) => { %>
             <nav>
                 <ul>
@@ -15,6 +17,7 @@
                 </ul>
             </nav>
         <% }); %>
-    <%- include("./components/headerPainel.ejs") %>
+        <%- include("./components/headerPainel.ejs") %>
+    </div>
 </body>
 </html>

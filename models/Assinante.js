@@ -1,55 +1,25 @@
 import {DataTypes} from "sequelize";
 import conn from "../database/conn.js";
+import Users from "./Users.js";
 
 const Assinante = conn.define("assinantes",{
-    foto:{
-        type:DataTypes.STRING,
-        allowNull:true
+    userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     },
-    nome:{
-        type:DataTypes.STRING(150),
-        allowNull:false
-    },
-    sobrenome:{
-        type:DataTypes.STRING(150),
-        allowNull:false
-    },
-    nascimento:{
-        type:DataTypes.DATE,
-        allowNull:false
-    },
-    idade:{
-        type:DataTypes.INTEGER,
-        allowNull:false
-    },
-    genero:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-    pais:{
-        type:DataTypes.STRING,
-        allowNull:true
-    },
-    estado:{
-        type:DataTypes.STRING,
-        allowNull:true
-    },
-    cidade:{
-        type:DataTypes.STRING,
-        allowNull:true
-    },
-    roles:{
-        type:DataTypes.STRING,
+    assinante:{
+        type:DataTypes.BOOLEAN,
         allowNull:false,
-        defaultValue:"assinante"
+        defaultValue:false
     }
 });
 
+// Especificando que a chave estrangeira na tabela Assinante é chamada de 'user_id' e refere-se ao id na tabela Users
+Assinante.belongsTo(Users, { foreignKey: 'userId' });
 Assinante.sync()
 .then(()=>{
-    console.log(`A tabela assinantes foi criada com sucesso!`);
+    console.log(`A tabela assinantes foi criada e associada a tabel usuário`);
 }).catch((error)=>{
-    console.log(`Não foi possível criar a tabela assinantes. Error:${error}`);
-});
-
+    console.log(`Não foi possível associar e nem criar a tabela assinantes. ${erro}`);
+})
 export default Assinante;

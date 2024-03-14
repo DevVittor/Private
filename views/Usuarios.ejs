@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/usuario.css">
     <title>Lista de Usuarios</title>
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Lista de Usuarios</h1>
-    <% listUsers.forEach((usuario)=>{ %>
-        <nav>
-            <ul>
-                <li>ID: <%= usuario.id %> | Email: <%= usuario.email %> | Nome: <%= usuario.nome %> | Roles: <%= usuario.roles %></li>
-            </ul>
-        </nav>
-    <%});%>
-    <%- include("./components/headerPainel.ejs") %>
+    <div class="container_usuario">
+        <h1>Lista de Usuarios</h1>
+        <% listUsers.forEach((usuario)=>{ %>
+            <nav>
+                <ul>
+                    <li>ID: <%= usuario.id %> | Email: <%= usuario.email %> | Nome: <%= usuario.nome %> | Roles: <%= usuario.roles %></li>
+                </ul>
+            </nav>
+        <%});%>
+        <%- include("./components/headerPainel.ejs") %>
+    </div>
 </body>
 </html>

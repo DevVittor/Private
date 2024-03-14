@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/post.css">
     <title>Post</title>
 </head>
 <body>
     <%- include("./components/Nav.ejs") %>
-    <h1>Publicar</h1>
-    <form onsubmit="handlePost(event)">
-        <input type="text" name="title" id="title_post" placeholder="Title">
-        <input type="submit" value="Criar Post">
-    </form>
-    <%- include("./components/headerPainel.ejs") %>
+    <div class="container_post">
+        <h1>Publicar</h1>
+        <form onsubmit="handlePost(event)">
+            <input type="text" name="title" id="title_post" placeholder="Title">
+            <input type="submit" value="Criar Post">
+        </form>
+        <%- include("./components/headerPainel.ejs") %>
+    </div>
 </body>
 <script src="/js/posts.js"></script>
 </html>
