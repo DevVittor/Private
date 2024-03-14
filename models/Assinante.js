@@ -6,7 +6,7 @@ const Assinante = conn.define("assinantes",{
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false
-    },
+    },  
     assinante:{
         type:DataTypes.BOOLEAN,
         allowNull:false,

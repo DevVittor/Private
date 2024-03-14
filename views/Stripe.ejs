@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe</title>
+</head>
+<body>
+    <h1>Stripe</h1>
+    <div>
+        <h2>Cadastrar Chave Secreta Stripe</h2>
+        <% if (stripeKey === "") { %>
+            <p>A chave secreta do Stripe ainda não foi configurada.</p>
+        <% } else { %>
+            <h3><%= stripeKey %></h3>
+            <a href="https://dashboard.stripe.com/test/apikeys" target="_blank">Chave secreta</a>
+            <form onsubmit="handleKeyStripe(event)">
+                <input type="text" name="stripeKey" id="input_stripe" placeholder="Stripe Key">
+                <input type="submit" value="Cadastrar Chave Secreta">
+            </form>
+        <% } %>
+    </div>
+</body>
+<script src="/js/stripe.js"></script>
+</html>

@@ -2,12 +2,8 @@ import Users from "../models/Users.js";
 import Assinante from "../models/Assinante.js";
 class Assinantes{
 
-    async index(req,res){
-        const assinantesLista = await Users.findAll({
-            where:{
-                roles:"assinante"
-            }
-        });
+    async index(req,res){   
+        const assinantesLista = await Users.findAll();
         if(!assinantesLista) return res.status(404).json({msg:`Não foi encontrado nenhum assinante`});
     
         res.render("Assinantes",{assinantesLista: assinantesLista});

@@ -9,7 +9,6 @@ import contato from "./ContatoRoute.js";
 import painel from "./PainelRoute.js";
 import register from "./RegisterRoute.js";
 import assinante from "./AssinanteRoute.js";
-import stripe from "./StripeRoute.js";
 import login from "./LoginRoute.js";
 
 router.use("/", home);
@@ -19,7 +18,6 @@ router.use("/contato",contato);
 router.use("/painel",painel);
 router.use("/register", register);
 router.use("/assinante",assinante);
-router.use('/stripe',stripe);
 router.use("/login",login);
 
 export default router;

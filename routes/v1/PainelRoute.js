@@ -12,6 +12,8 @@ import Assinantes from "../../controllers/AssinantesController.js";
 const assinantesController = new Assinantes();
 import Parceiros from "../../controllers/ParceirosController.js";
 const parceirosController = new Parceiros();
+import Stripe from "../../controllers/StripeController.js";
+const stripeController  = new Stripe();
 import Editar from "../../controllers/EditarController.js";
 const editarController = new Editar();
 import Suporte from "../../controllers/SuporteController.js";
@@ -22,11 +24,13 @@ router.get("/post/:id",postController.index);
 router.get("/usuarios/:id",usuariosController.index);
 router.get("/assinantes/:id",assinantesController.index);
 router.get("/parceiros/:id",parceirosController.index);
+router.get("/stripe/:id",stripeController.index);
 router.get("/editar/:id",editarController.index);
 router.get("/suporte/:id",suporteController.index);
 
 router.post("/:id",painelController.store);
 router.post("/post/:id",postController.store);
+router.post("/stripe/:id",stripeController.store);
 
 router.put("/:id",painelController.put);
 

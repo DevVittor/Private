@@ -4,6 +4,14 @@ dotenv.config();
 
 class Stripe{
 
+    async index(req,res){
+
+        const stripeKey = process.env.STRIPE_SECRET_KEY;
+        // Renderiza a página de planos e passa a chave secreta do Stripe como uma variável
+        res.render("Stripe", { stripeKey });
+
+    }
+
     async store(req,res){
 
         const { codigoStripe } = req.body;
