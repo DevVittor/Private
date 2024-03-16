@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 8px;
     height: auto;
-    width: 60%;
+    width: 50%;
     border-radius: 5px;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -54,6 +54,7 @@
     height: 350px;
     width: 100%;
     object-fit: cover;
+    
 }
 .full_img_post {
     position: absolute;

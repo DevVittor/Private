@@ -7,36 +7,11 @@
     <title>Home</title>
 </head>
 <body>
-    
-    
+    <%- include("./components/NavHeader.ejs") %>
     <main>
         <section>
             <div class="container_home">
-                <%- include("./components/Nav.ejs") %>
                 <div class="box_content_home">
-                    <div class="publication_home">
-                        <div class="img_publication_home">
-                            <img class="" src="https://images.pexels.com/photos/20193046/pexels-photo-20193046/free-photo-of-leve-luz-light-restaurante.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-                        </div>
-                        <div class="content_publication_home">
-                            <div class="input_publication_home">
-                                <input class="" type="text" name="" id="" placeholder="Share something...">
-                                <button class="" type="submit"><i class="bi bi-cloud-arrow-up-fill"></i>Publicar</button>
-                            </div>
-                            <div class="buttons_publication_home">
-                                <button class=""><i class="bi bi-image"></i>Image</button>
-                                <button class=""><i class="bi bi-camera-video-fill"></i>Video</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box_filter_home">
-                        <hr class="">
-                        <span class="">Sort By:</span>
-                        <select name="" id="" class="">
-                            <option class="" value="">Recent</option>
-                        </select>
-                    </div>
 
                     <div class="container_content_home">
                         <%- include("./components/cardPost.ejs") %>

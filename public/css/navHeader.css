@@ -1,0 +1,44 @@
+header{
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 9999;
+}
+.container_nav_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+.logo_nav_header h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+.menu_nav_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.nav_header ul{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nav_header a{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+.sub_header button{
+    padding: 3px 12px;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    border-radius: 3px;
+}

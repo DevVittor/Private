@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node --watch --experimental-modules --trace-warnings server.js",
-    "dev": "cross-env NODE_ENV=development node --watch server.js"
+    "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",

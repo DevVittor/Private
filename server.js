@@ -44,11 +44,12 @@ app.use((req, __, next) => {
     next();
 });
 
+app.use("/v1", router);
+
 conn.authenticate()
 .then(()=>{
     console.log(`Banco de dados sincronizado`)
 }).then(()=>{
-    app.use("/v1", router);
     createServe.listen(port,()=>{
         console.log(`Servidor rodando na porta ${port} em modo ${modoNode}`);
     });
